@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8" />
+  <title>هک شدید!</title>
+  <style>
+    body {
+      background-color: black;
+      color: red;
+      font-family: Tahoma, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+    }
+    #startBtn {
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 20px 40px;
+      font-size: 24px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    #message {
+      margin-top: 40px;
+      font-size: 20px;
+      white-space: pre-line;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>برای ادامه کلیک کن...</h1>
+  <button id="startBtn">شروع</button>
+  <div id="message">
+    سیستم شما توسط <strong>Amir</strong> هک شد!
+    تمام اطلاعات شما در دست ماست...
+    
+    ما فراموش نمی‌کنیم...
+    ما نمی‌بخشیم...
+    منتظر باشید...
+  </div>
+  <audio id="scarySound" src="https://filebin.net/ncgi06t7a0wj52xj/Hack.mp3" preload="auto"></audio>
+
+  <script>
+    const btn = document.getElementById("startBtn");
+    const msg = document.getElementById("message");
+    const audio = document.getElementById("scarySound");
+
+    btn.addEventListener("click", () => {
+      audio.play();
+      msg.style.display = "block";
+      btn.style.display = "none";
+      document.querySelector("h1").style.display = "none";
+    });
+  </script>
+</body>
+</html>
